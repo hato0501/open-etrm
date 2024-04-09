@@ -1,0 +1,61 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/rust
+{
+	"name": "open-etrm",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "mcr.microsoft.com/devcontainers/rust:1-1-bullseye",
+	"features": {
+		"ghcr.io/devcontainers/features/aws-cli:1": {},
+		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+	},
+
+	// Use 'mounts' to make the cargo cache persistent in a Docker Volume.
+	// "mounts": [
+	// 	{
+	// 		"source": "devcontainer-cargo-cache-${devcontainerId}",
+	// 		"target": "/usr/local/cargo",
+	// 		"type": "volume"
+	// 	}
+	// ]
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "rustc --version",
+
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				// Docs
+				"hediet.vscode-drawio",
+				"yzhang.markdown-all-in-one",
+				"bierner.github-markdown-preview",
+				"bierner.markdown-mermaid",
+				"jebbs.plantuml",
+				// IaC
+				"HashiCorp.terraform",
+				"ms-vscode.makefile-tools",
+				"ms-azuretools.vscode-docker",
+				"saramorillon.terraform-graph",
+				// DevTools
+				"Gruntfuggly.todo-tree",
+				"cedar-policy.vscode-cedar",
+				"42Crunch.vscode-openapi",
+				"mhutchie.git-graph",
+				"humao.rest-client",
+				"github.vscode-github-actions",
+				"redhat.vscode-xml",
+				"eamodio.gitlens",
+				"donjayamanne.githistory",
+				"GitHub.vscode-pull-request-github",
+				"GitHub.copilot",
+				"GitHub.copilot-chat"
+			]
+		}
+	},
+	"remoteUser": "vscode"
+}
